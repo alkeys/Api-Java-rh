@@ -1,7 +1,9 @@
-package com.alkeys.rh.rest;
+package com.alkeys.rh.rest.empleados;
 
-import com.alkeys.rh.entity.Empleado;
-import com.alkeys.rh.service.EmpleadoService;
+import com.alkeys.rh.entity.empleados.Empleado;
+import com.alkeys.rh.rest.AbstractRest;
+import com.alkeys.rh.rest.UrlApi;
+import com.alkeys.rh.service.empleados.EmpleadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.alkeys.rh.service;
+package com.alkeys.rh.service.utils;
 
 
 import org.springframework.data.domain.PageRequest;

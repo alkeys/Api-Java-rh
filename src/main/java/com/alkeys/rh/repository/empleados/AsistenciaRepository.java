@@ -1,9 +1,8 @@
-package com.alkeys.rh.repository;
+package com.alkeys.rh.repository.empleados;
 
-import com.alkeys.rh.entity.Asistencia;
+import com.alkeys.rh.entity.empleados.Asistencia;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.util.List;
 

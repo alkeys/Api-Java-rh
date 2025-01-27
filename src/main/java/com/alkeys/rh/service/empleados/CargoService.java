@@ -1,8 +1,9 @@
-package com.alkeys.rh.service;
+package com.alkeys.rh.service.empleados;
 
 
-import com.alkeys.rh.entity.Cargo;
-import com.alkeys.rh.repository.CargoRepository;
+import com.alkeys.rh.entity.empleados.Cargo;
+import com.alkeys.rh.repository.empleados.CargoRepository;
+import com.alkeys.rh.service.utils.ServiceAbstract;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.alkeys.rh.rest;
 
-import com.alkeys.rh.service.ServiceInterfase;
+import com.alkeys.rh.service.utils.ServiceInterfase;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

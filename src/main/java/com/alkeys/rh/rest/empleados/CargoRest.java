@@ -1,8 +1,10 @@
-package com.alkeys.rh.rest;
+package com.alkeys.rh.rest.empleados;
 
 
-import com.alkeys.rh.entity.Cargo;
-import com.alkeys.rh.service.CargoService;
+import com.alkeys.rh.entity.empleados.Cargo;
+import com.alkeys.rh.rest.AbstractRest;
+import com.alkeys.rh.rest.UrlApi;
+import com.alkeys.rh.service.empleados.CargoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;

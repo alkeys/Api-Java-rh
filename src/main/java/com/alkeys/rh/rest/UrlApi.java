@@ -7,6 +7,9 @@ public final class UrlApi {
     public static final String CARGOS = "/rh-api/cargos";
     public static final String DEPARTAMENTOS = "/rh-api/departamentos";
 
+    public static final String UserApp = "/rh-api/userapp";
+    public static final String UserAppLogin = "/rh-api/userapp/login";
+
     private UrlApi() {
         // Constructor privado para evitar instanciación
     }

@@ -1,4 +1,4 @@
-package com.alkeys.rh.entity;
+package com.alkeys.rh.entity.empleados;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

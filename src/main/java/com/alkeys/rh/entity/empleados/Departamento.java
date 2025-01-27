@@ -1,12 +1,21 @@
-package com.alkeys.rh.entity;
+package com.alkeys.rh.entity.empleados;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import org.hibernate.annotations.Generated;
 
 @Entity(name = "Departamento")
 @Table(name = "departamentos", schema = "public")
+@NamedQueries({
+        @NamedQuery(
+                name = "Departamento.countEmpleados",
+                query = "SELECT COUNT(e) FROM Empleado e WHERE e.departamento.id = :id"
+        ),
+        @NamedQuery(
+                name = "Departamento.DepartamentoCountEmpleados",
+               query = "SELECT d.id as id, d.nombre as nombre, COUNT(e) FROM Empleado e RIGHT JOIN e.departamento d GROUP BY d.id, d.nombre"
+        )
+})
 public class Departamento {
     @Id
     @Column(name = "id", nullable = false)
