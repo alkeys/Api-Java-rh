@@ -23,5 +23,10 @@ La base de datos utilizada es **PostgreSQL**.
 
 *Creado por Alkey* ✨
 
+[![Screenshot-2025-01-27-at-09-32-18-Swagger-UI.png](https://i.postimg.cc/bJD3T91m/Screenshot-2025-01-27-at-09-32-18-Swagger-UI.png)](https://postimg.cc/1nSGR6CF)
+
+
 [![Screenshot-2025-01-27-at-09-31-07-Swagger-UI.png](https://i.postimg.cc/HsGP6RZX/Screenshot-2025-01-27-at-09-31-07-Swagger-UI.png)](https://postimg.cc/nMkkzRth)
+
+
 
