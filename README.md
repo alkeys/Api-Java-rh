@@ -25,4 +25,3 @@ La base de datos utilizada es **PostgreSQL**.
 
 [![Screenshot-2025-01-27-at-09-31-07-Swagger-UI.png](https://i.postimg.cc/HsGP6RZX/Screenshot-2025-01-27-at-09-31-07-Swagger-UI.png)](https://postimg.cc/nMkkzRth)
 
-[![Screenshot-2025-01-27-at-09-29-13-Swagger-UI.png](https://i.postimg.cc/L4JrCzHK/Screenshot-2025-01-27-at-09-29-13-Swagger-UI.png)](https://postimg.cc/8sVKsfJt)
