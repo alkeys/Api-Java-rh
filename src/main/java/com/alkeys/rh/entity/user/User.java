@@ -43,6 +43,10 @@ public class User {
     @JsonIgnore
     private Set<Log> logs = new LinkedHashSet<>();
 
+    //rol del usuario
+    @Column(name = "rol")
+    private String rol;
+
     public Long getId() {
         return id;
     }
