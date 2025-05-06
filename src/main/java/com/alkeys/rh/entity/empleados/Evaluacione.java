@@ -24,12 +24,7 @@ public class Evaluacione {
     private String descripcion;
 
     @NotNull
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "empleado_id", nullable = false)
-    private Empleado empleado;
-
-    @NotNull
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "departamentos_id", nullable = false)
     private Departamento departamento;
 
@@ -55,14 +50,6 @@ public class Evaluacione {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
-    }
-
-    public Empleado getEmpleado() {
-        return empleado;
-    }
-
-    public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
     }
 
     public Departamento getDepartamento() {

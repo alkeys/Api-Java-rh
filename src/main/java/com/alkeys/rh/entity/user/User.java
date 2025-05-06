@@ -1,57 +1,48 @@
 package com.alkeys.rh.entity.user;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import org.hibernate.annotations.ColumnDefault;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
-
-@Entity(name = "User")
-@Table(name = "users", schema = "public")
-@NamedQueries({
-        @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
-        @NamedQuery(name = "User.findById", query = "SELECT u FROM User u WHERE u.id = :id"),
-        @NamedQuery(name = "User.findByUsername", query = "SELECT u FROM User u WHERE u.username = :username"),
-        @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password"),
-        @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email"),
-        @NamedQuery(name = "User.findByActivo", query = "SELECT u FROM User u WHERE u.activo = :activo"),
-        @NamedQuery(name ="User.findByUserEmailAndPassword", query = "SELECT u FROM User u WHERE u.email = :email AND u.password = :password")
-})
+@Entity
+@Table(name = "users")
 public class User {
     @Id
-    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @ColumnDefault("nextval('users_id_seq')")
+    @Column(name = "id", nullable = false)
+    private Integer id;
 
+    @Size(max = 50)
     @NotNull
-    @Column(name = "username", nullable = false, length = Integer.MAX_VALUE)
+    @Column(name = "username", nullable = false, length = 50)
     private String username;
 
+    @Size(max = 255)
     @NotNull
-    @Column(name = "password", nullable = false, length = Integer.MAX_VALUE)
+    @Column(name = "password", nullable = false)
     private String password;
 
+    @Size(max = 100)
     @NotNull
-    @Column(name = "email", nullable = false, length = Integer.MAX_VALUE)
-    private String email;
+    @Column(name = "email", nullable = false, length = 100)
+    private String userEmail;
 
-    @Column(name = "activo")
-    private Boolean activo;
-
-    @OneToMany(mappedBy = "user")
-    @JsonIgnore
-    private Set<Log> logs = new LinkedHashSet<>();
-
-    //rol del usuario
-    @Column(name = "rol")
+    @Size(max = 50)
+    @NotNull
+    @Column(name = "rol", nullable = false, length = 50)
     private String rol;
 
-    public Long getId() {
+    @NotNull
+    @Column(name = "activo", nullable = false)
+    private Boolean activo = false;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -72,11 +63,19 @@ public class User {
     }
 
     public String getEmail() {
-        return email;
+        return userEmail;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.userEmail = email;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 
     public Boolean getActivo() {
@@ -85,14 +84,6 @@ public class User {
 
     public void setActivo(Boolean activo) {
         this.activo = activo;
-    }
-
-    public Set<Log> getLogs() {
-        return logs;
-    }
-
-    public void setLogs(Set<Log> logs) {
-        this.logs = logs;
     }
 
 }
