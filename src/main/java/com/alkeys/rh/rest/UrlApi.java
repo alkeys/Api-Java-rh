@@ -10,6 +10,8 @@ public final class UrlApi {
     public static final String UserApp = "/rh-api/userapp";
     public static final String UserAppLogin = "/rh-api/userapp/login";
 
+    public static final String Preguntas = "/rh-api/preguntas";
+
     private UrlApi() {
         // Constructor privado para evitar instanciación
     }
