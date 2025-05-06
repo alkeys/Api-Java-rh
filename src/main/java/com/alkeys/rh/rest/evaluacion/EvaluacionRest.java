@@ -8,10 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import static com.alkeys.rh.rest.UrlApi.Evaluaciones;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/evaluaciones")
+@RequestMapping( Evaluaciones) // rh-api/evaluaciones
 public class EvaluacionRest  extends AbstractRest <Evaluacione, EvaluacionSevice> {
     @Autowired
     private EvaluacionSevice evaluacionSevice;
