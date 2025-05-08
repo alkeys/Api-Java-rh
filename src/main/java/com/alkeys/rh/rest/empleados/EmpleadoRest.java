@@ -51,10 +51,15 @@ public class EmpleadoRest extends AbstractRest<Empleado, EmpleadoService> {
 
         esta es la estructura de un empleado para guardar con la api de openapi
              */
+
     @PostMapping("/saveEmpleado/")
-    public Empleado save(Empleado empleado, Long DepartamentoId, Long CargoId) {
-        return empleadoService.save(empleado, DepartamentoId, CargoId);
+    public Empleado saveEmpleado(
+            @RequestBody Empleado empleado,
+            @RequestParam("DepartamentoId") Long departamentoId,
+            @RequestParam("CargoId") Long cargoId) {
+        return empleadoService.save(empleado, departamentoId, cargoId);
     }
+
 
     @PutMapping("/updateEmpleado/{id}/")
     public Empleado update(@PathVariable Long id, @RequestBody Empleado entity, Long DepartamentoId, Long CargoId) {
