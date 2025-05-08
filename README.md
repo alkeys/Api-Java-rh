@@ -1,5 +1,15 @@
 # Acceso a la API 🚀
 
+Para crear el contenedor Docker, ejecuta el siguiente comando:
+
+```bash
+docker run --name recursos_humanos_db \
+  -e POSTGRES_DB=recursos_humanos \
+  -e POSTGRES_USER=admin \
+  -e POSTGRES_PASSWORD=admin \
+  -p 5432:5432 \
+  -d postgres
+
 Para acceder a la API, visita el siguiente enlace:  
 🔗 [Swagger UI](http://localhost:8080/swagger-ui/index.html)
 

@@ -13,6 +13,8 @@ public final class UrlApi {
     public static final String Preguntas = "/rh-api/preguntas";
     public static final String Evaluaciones = "/rh-api/evaluaciones";
 
+    public static final String RespuestasEvaluacion = "/rh-api/respuestas-evaluacion";
+
     private UrlApi() {
         // Constructor privado para evitar instanciación
     }
